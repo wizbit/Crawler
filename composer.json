@@ -1,0 +1,23 @@
+{
+    "name": "mjs/crawler",
+    "description": "description_text",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Marcus Speight",
+            "email": "marcus.speight@hotmail.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Mjs\\": "src/Mjs/" }
+    },
+    "require": {
+        "doctrine/orm": "2.4.*",
+        "symfony/class-loader": "2.5.*",
+        "symfony/dependency-injection": "2.5.*",
+        "symfony/config": "2.5.*",
+        "symfony/yaml": "2.5.*",
+        "fabpot/goutte": "v2.0.0"
+    }
+}

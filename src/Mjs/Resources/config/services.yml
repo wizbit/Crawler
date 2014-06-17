@@ -1,0 +1,24 @@
+parameters:
+    database_config:
+        driver: pdo_pgsql
+        host: 127.0.0.1
+        port: null
+        dbname: crawler
+        user: evsid
+        password: 888pY6g41a6Bee354G3m
+
+services:
+    app:
+        class: Mjs\Tool\Application
+
+    doctrine.orm.configuration:
+        class: Doctrine\ORM\Configuration
+        factory_class: Mjs\Doctrine\Configuration
+        factory_method: setup
+        arguments: [true]
+
+    doctrine.orm.entity_manager:
+        class: Doctrine\ORM\EntityManager
+        factory_class: Doctrine\ORM\EntityManager
+        factory_method: create
+        arguments: [ %database_config%, @doctrine.orm.configuration ]
